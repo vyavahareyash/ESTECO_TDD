@@ -29,6 +29,15 @@ public class TestFunction {
 		assertEquals("6",AddFunction.add("1\n2,3"));
 	}
 	
+	@Test
+	public void endsWithDelimiter() {
+		try {
+			AddFunction.add("2,3,");
+		} catch(RuntimeException ex) {
+			assertEquals("Number expected but EOF found",ex.getMessage());
+		}
+	}
+	
 	@Test 
 	public void customDelimiter() {
 		assertEquals("3",AddFunction.add("//;\n1;2"));

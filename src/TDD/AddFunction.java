@@ -42,6 +42,9 @@ public class AddFunction {
 	}
 	
 	public static String[] splitByNewlineComma(String number) {
+		if (number.endsWith(",")){
+			throw new RuntimeException("Number expected but EOF found");
+		}
 		String[] tokens=number.split(",|\n");
 		return tokens;
 	}
@@ -51,6 +54,9 @@ public class AddFunction {
 		m.matches();
 		String delimiter=m.group(1);
 		String numbers=m.group(2);
+		if (numbers.endsWith(delimiter)){
+			throw new RuntimeException("Number expected but EOF found");
+		}
 		return numbers.split(Pattern.quote(delimiter));
 	}
 	
