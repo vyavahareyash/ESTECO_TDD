@@ -35,4 +35,13 @@ public class TestFunction {
 		assertEquals("6",AddFunction.add("//|\n1|2|3"));
 		assertEquals("5",AddFunction.add("//sep\n2sep3"));
 	}
+	
+	@Test
+	public void negativeNumbers() {
+		try {
+			AddFunction.add("2,-4,-5");
+		} catch (RuntimeException ex) {
+			assertEquals("Negative not allowed : -4, -5",ex.getMessage());
+		}
+	}
 }
