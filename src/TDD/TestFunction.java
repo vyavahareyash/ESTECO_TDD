@@ -18,4 +18,9 @@ public class TestFunction {
 	public void sumOfTwoNumbers() {
 		assertEquals("3.3",AddFunction.add("1.1,2.2"));
 	}
+	
+	@Test
+	public void sumOfMultipleNumbers() {
+		assertEquals("6",AddFunction.add("1,2,3"));
+	}
 }
