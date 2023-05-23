@@ -28,4 +28,11 @@ public class TestFunction {
 	public void newlineSeperator() {
 		assertEquals("6",AddFunction.add("1\n2,3"));
 	}
+	
+	@Test 
+	public void customDelimiter() {
+		assertEquals("3",AddFunction.add("//;\n1;2"));
+		assertEquals("6",AddFunction.add("//|\n1|2|3"));
+		assertEquals("5",AddFunction.add("//sep\n2sep3"));
+	}
 }
