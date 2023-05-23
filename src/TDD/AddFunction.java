@@ -19,7 +19,7 @@ public class AddFunction {
 	}
 	
 	public static String[] tokenize(String number) {	
-		String[] tokens=number.split(",");
+		String[] tokens=number.split(",|\n");
 		return tokens;
 	}
 	

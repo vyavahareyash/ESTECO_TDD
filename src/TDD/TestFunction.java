@@ -23,4 +23,9 @@ public class TestFunction {
 	public void sumOfMultipleNumbers() {
 		assertEquals("6",AddFunction.add("1,2,3"));
 	}
+	
+	@Test
+	public void newlineSeperator() {
+		assertEquals("6",AddFunction.add("1\n2,3"));
+	}
 }
